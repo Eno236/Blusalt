@@ -20,18 +20,18 @@ describe('API Tests for Registration and Login', () => {
           'Content-Type': 'application/json',
         }
       }).should((response) => {
-        expect(response.status).to.eq(200); // Check if the registration was successful
-        //expect(response.body).to.have.property('id'); // Ensure the response contains a user ID
+        expect(response.status).to.eq(200); l
+       
       });
     });
 
     it('should display existing user', () => {
-      const email = 'testuser' + Date.now() + '@yopmail.com'; // Generating a unique email
-      const password = 'TestP@ssword123'; // Sample password
+      const email = 'testuser' + Date.now() + '@yopmail.com'; 
+      const password = 'TestP@ssword123'; 
   
       cy.request({
         method: 'POST',
-        url: 'https://osc-ultimate-demo.mageplaza.com/', // Replace with your actual registration endpoint
+        url: 'https://osc-ultimate-demo.mageplaza.com/', 
         body: {
           email: email,
           password: password,
@@ -45,8 +45,8 @@ describe('API Tests for Registration and Login', () => {
           'Content-Type': 'application/json',
         }
       }).should((response) => {
-        expect(response.status).to.eq(200); // Check if the registration was successful
-        //expect(response.body).to.have.property('id'); // Ensure the response contains a user ID
+        expect(response.status).to.eq(200); 
+        
       });
     });
   

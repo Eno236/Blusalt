@@ -28,7 +28,7 @@ describe('API Authentication', () => {
             username: 'Rita@yobmail.com',
             password: 'Wr!Password123!'
           },
-          failOnStatusCode: false // Prevent test failure on 4xx responses
+          failOnStatusCode: false 
         }).then((response) => {
           expect(response.status).to.eq(200);
           expect(response.body).to.have.property('message');
